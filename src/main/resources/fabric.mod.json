@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "vertex-debug",
+  "version": "${version}",
+  "name": "Vertex Debug",
+  "description": "A Meteor Client addon featuring Chunk Finder — highlights 2x2 chunk areas containing user-selected block types.",
+  "authors": ["VertexDebug"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/vertex-debug/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.vertexdebug.VertexDebugAddon"
+    ],
+    "meteor": [
+      "com.vertexdebug.VertexDebugAddon"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "fabric-api": "*",
+    "minecraft": "1.21.x",
+    "meteor-client": "*"
+  }
+}
