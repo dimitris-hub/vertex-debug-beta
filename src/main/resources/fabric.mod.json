@@ -10,7 +10,7 @@
   "icon": "assets/vertex-debug/icon.png",
   "environment": "client",
   "entrypoints": {
-    "client": [
+    "meteor": [
       "com.vertexdebug.VertexDebugAddon"
     ],
     "meteor": [
