@@ -189,7 +189,7 @@ public class ChunkFinder extends Module {
 
             for (int dx = -viewDist; dx <= viewDist; dx++) {
                 for (int dz = -viewDist; dz <= viewDist; dz++) {
-                    WorldChunk c = mc.world.getChunk(center.x + dx, center.z + dz, net.minecraft.world.chunk.ChunkStatus.FULL, false);
+                    WorldChunk c = (WorldChunk) mc.world.getChunk(center.x + dx, center.z + dz, net.minecraft.world.chunk.ChunkStatus.FULL, false);
                     if (c != null) chunks.add(c);
                 }
             }
