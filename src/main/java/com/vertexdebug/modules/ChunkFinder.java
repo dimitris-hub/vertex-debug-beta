@@ -171,16 +171,13 @@ public class ChunkFinder extends Module {
 
     @EventHandler
     private void onRender(Render3DEvent event) {
+        @EventHandler
+    private void onRender(Render3DEvent event) {
         if (activeChunks.isEmpty()) return;
 
         for (ChunkPos pos : activeChunks.values()) {
             double x1 = pos.getStartX();
             double z1 = pos.getStartZ();
-            double x2 = pos.getEndX() + 1;
-            double z2 = pos.get someZStart() -> pos.getMinZ(); // Fixed clean bounds parsing
-            z2 = pos.getGridZ() -> pos.getEndZ() + 1; 
-            
-            // Cleaned up boundary mappings for 1.21.11
             double realX2 = pos.getEndX() + 1;
             double realZ2 = pos.getEndZ() + 1;
 
