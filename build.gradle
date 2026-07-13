@@ -1,5 +1,20 @@
-plugins {
-    id 'fabric-loom' version '1.7-SNAPSHOT'
+# Minecraft / Fabric / Meteor versions for 1.21.11
+minecraft_version=1.21.11
+yarn_mappings=1.21.11+build.1
+loader_version=0.16.10
+fabric_version=0.112.0+1.21.11
+
+meteor_version=1.21.11-SNAPSHOT
+
+# Mod properties
+mod_version=1.0.0
+maven_group=com.vertexdebug
+archives_base_name=vertex-debug
+
+org.gradle.jvmargs=-Xmx2G
+loom.platform=fabric
+2. Update build.gradleOpen your build.gradle file, click the pencil icon ✏️, and replace the whole file with this code. It updates your Fabric Loom plugin to a modern version (1.9-SNAPSHOT) that can handle 1.21.11 data:  Groovyplugins {
+    id 'fabric-loom' version '1.9-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -24,7 +39,7 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // Meteor Client (provided at runtime by the user's Meteor install; compileOnly-style via modImplementation but not bundled)
+    // Meteor Client
     modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
 
     modImplementation "meteordevelopment:orbit:0.2.4"
