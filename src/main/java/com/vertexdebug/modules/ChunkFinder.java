@@ -153,7 +153,7 @@ public class ChunkFinder extends Module {
     /** Scans a single chunk's sections for any block in the tracked set, returning the first match position found. */
     private BlockPos findTrackedBlockInChunk(WorldChunk chunk, Set<Block> trackedSet) {
         int minY = chunk.getBottomY();
-        int maxY = chunk.getTopY();
+        int maxY = chunk.getTopYInclusive();
 
         ChunkPos cp = chunk.getPos();
         int baseX = cp.getStartX();
